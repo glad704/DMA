@@ -1,0 +1,15 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 3184
+cmd: ./malloc
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+events: curB  curBk 
+fl=(1) /home/gladson/Desktop/Practice/DMA/malloc.c
+fn=(1) main
+9 12 1
+
+totals: 12 1

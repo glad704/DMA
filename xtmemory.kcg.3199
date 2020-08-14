@@ -1,0 +1,143 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 3199
+cmd: ./malloc
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+event: totB : total allocated Bytes
+event: totBk : total allocated Blocks
+event: totFdB : total Freed Bytes
+event: totFdBk : total Freed Blocks
+events: curB  curBk  totB  totBk  totFdB  totFdBk 
+fl=(1) /home/gladson/Desktop/Practice/DMA/malloc.c
+fn=(1) main
+7
+cfi=(2) /build/glibc-2ORdQG/glibc-2.27/libio/ioputs.c
+cfn=(2) puts
+calls=0 40
+7 0 0 1024 1 0 0
+fl=(2)
+fn=(2)
+40
+cfi=(3) /build/glibc-2ORdQG/glibc-2.27/libio/fileops.c
+cfn=(3) _IO_file_xsputn@@GLIBC_2.2.5
+calls=0 1266
+40 0 0 1024 1 0 0
+fl=(3)
+fn=(3)
+1266
+cfi=(3)
+cfn=(4) _IO_file_overflow@@GLIBC_2.2.5
+calls=0 759
+1266 0 0 1024 1 0 0
+fl=(3)
+fn=(4)
+759
+cfi=(4) /build/glibc-2ORdQG/glibc-2.27/libio/genops.c
+cfn=(5) _IO_doallocbuf
+calls=0 365
+759 0 0 1024 1 0 0
+fl=(4)
+fn=(5)
+365
+cfi=(5) /build/glibc-2ORdQG/glibc-2.27/libio/filedoalloc.c
+cfn=(6) _IO_file_doallocate
+calls=0 101
+365 0 0 1024 1 0 0
+fl=(5)
+fn=(6)
+101 0 0 1024 1 0 0
+
+fl=(1)
+fn=(1)
+8
+cfi=(6) /build/glibc-2ORdQG/glibc-2.27/stdio-common/isoc99_scanf.c
+cfn=(7) __isoc99_scanf
+calls=0 37
+8 0 0 1024 1 0 0
+fl=(6)
+fn=(7)
+37
+cfi=(7) /build/glibc-2ORdQG/glibc-2.27/stdio-common/vfscanf.c
+cfn=(8) _IO_vfscanf
+calls=0 630
+37 0 0 1024 1 0 0
+fl=(7)
+fn=(8)
+630
+cfi=(4)
+cfn=(9) _IO_default_uflow
+calls=0 380
+630 0 0 1024 1 0 0
+fl=(4)
+fn=(9)
+380
+cfi=(3)
+cfn=(10) _IO_file_underflow@@GLIBC_2.2.5
+calls=0 495
+380 0 0 1024 1 0 0
+fl=(3)
+fn=(10)
+495
+cfi=(4)
+cfn=(5)
+calls=0 365
+495 0 0 1024 1 0 0
+fl=(4)
+fn=(5)
+365
+cfi=(5)
+cfn=(6)
+calls=0 101
+365 0 0 1024 1 0 0
+fl=(5)
+fn=(6)
+101 0 0 1024 1 0 0
+
+fl=(1)
+fn=(1)
+9 12 1 12 1 0 0
+
+fl=(8) /build/glibc-2ORdQG/glibc-2.27/csu/../csu/libc-start.c
+fn=(11) (below main)
+344
+cfi=(9) /build/glibc-2ORdQG/glibc-2.27/stdlib/exit.c
+cfn=(12) exit
+calls=0 139
+344 0 0 0 0 2048 2
+fl=(9)
+fn=(12)
+139
+cfi=(9)
+cfn=(13) __run_exit_handlers
+calls=0 132
+139 0 0 0 0 2048 2
+fl=(9)
+fn=(13)
+132
+cfi=(10) UnknownFile???
+cfn=(14) _vgnU_freeres
+calls=0 0
+132 0 0 0 0 2048 2
+fl=(10)
+fn=(14)
+0
+cfi=(10)
+cfn=(15) __libc_freeres
+calls=0 0
+0 0 0 0 0 2048 2
+fl=(10)
+fn=(15)
+0
+cfi=(10)
+cfn=(16) buffer_free
+calls=0 0
+0 0 0 0 0 2048 2
+fl=(10)
+fn=(16)
+0 0 0 0 0 2048 2
+
+totals: 12 1 2060 3 2048 2
